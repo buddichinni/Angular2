@@ -1,0 +1,15 @@
+.background{
+  background: "w3s.png";
+}
+ .heading{
+     color: #91519c;;
+     text-align: center;     
+ }
+ .body{
+   text-align: end;  
+   padding-right: 93px;
+   padding-top: 75px;
+ }
+.Password{
+  margin-top: 30px;
+}
