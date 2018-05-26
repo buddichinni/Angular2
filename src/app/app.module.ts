@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { Test1Component } from './test1/test1.component';
+import { LoginComponent } from './login/login.component';
+import { credentialsService } from './credentials-service.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { Test1Component } from './test1/test1.component';
     HeaderComponent,
     ContentComponent,
     FooterComponent,
-    Test1Component
+    Test1Component,
+    LoginComponent,
+    credentialsService
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [credentialsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

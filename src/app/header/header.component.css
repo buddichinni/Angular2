@@ -12,3 +12,8 @@
 .color{
    background-color:  rgb(65, 181, 174);
 }
+.LoginBtn{
+    color: white;
+    background: orange;
+    border: 2px solid orange;
+}
