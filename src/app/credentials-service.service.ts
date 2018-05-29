@@ -2,16 +2,15 @@ import { Injectable } from '@angular/core';
 
 
 @Injectable(  )
-export class CredentialsServiceService {
+export class CredentialsService {
 
   constructor() { }
-  messages: string[] = [];
+  loginId: string = "Purnima";
+  pwd: string = "test";
   
-   add(message: string) {
-     this.messages.push(message);
-   }
-  
-   clear() {
-     this.messages = [];
+   add(usrnm: string,pswd:string) {
+    alert(usrnm+pswd);
+    console.log(usrnm);
+    return usrnm;
    }
 }

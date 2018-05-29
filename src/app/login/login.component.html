@@ -1,5 +1,5 @@
 <div class="LoginDiv">
-  <label>User name</label><input [(ng-model)]="username" type="text"><br>
-  <label>Password</label><input [(ng-model)]="password" type="password"><br>
-  <button class="Loginb" style="float: right" (click)="ClickFunction(username,password)">Login</button><br>
+  <label>User name</label><input type="text" [(ngModel)]="username">{{name}}<br>
+  <label>Password</label><input type="password"  [(ngModel)]="password">{{pword}}<br>
+  <button class="Loginb" style="float: right" (click)="ClickFunction(username,password)">Login</button><br>  
 </div>
