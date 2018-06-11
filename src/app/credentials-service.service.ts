@@ -5,12 +5,15 @@ import { Injectable } from '@angular/core';
 export class CredentialsService {
 
   constructor() { }
-  loginId: string = "Purnima";
-  pwd: string = "test";
-  
-   add(usrnm: string,pswd:string) {
-    alert(usrnm+pswd);
-    console.log(usrnm);
-    return usrnm;
+  loginId: string = 'Purnima';
+  pwd: string = 'purnima@123';
+  credentials:string='';
+   Authenticate(usrnm: string,pswd:string) {
+     if(usrnm==this.loginId && pswd ==this.pwd){
+       this.credentials=usrnm+pswd;
+     return this.credentials;           
+     }
+     else
+    return "Invalid credentials";        
    }
 }

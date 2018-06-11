@@ -1,0 +1,13 @@
+.LoginBtn{
+    color: white;
+    background: orange;
+    border: 2px solid orange;
+    border-radius: 5px;
+    margin: 16px 65px 12px 0;
+}
+.IndexFile{
+    text-align: right;
+}
+body{
+    background-color: #4db6d6 !important
+}

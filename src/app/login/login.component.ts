@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CredentialsService } from 'app/credentials-service.service';
+import { Router } from "@angular/router";
+import { FormControl, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-login',
@@ -10,10 +12,14 @@ import { CredentialsService } from 'app/credentials-service.service';
 export class LoginComponent implements OnInit {
   
   details:string;
-  constructor(private _credentialsService:CredentialsService) { 
+  constructor(private _credentialsService:CredentialsService,private router:Router) { 
+  this.details=this._credentialsService.Authenticate("sd","sds");  
   }
   ClickFunction(username:string,password:string){  
-    this.details= this._credentialsService.add(username,password);
+    this.details= this._credentialsService.Authenticate(username,password);
+    if(this.details!="Invalid credentials"){
+      this.router.navigate(['/content']);
+    }
   }
   
   ngOnInit() {

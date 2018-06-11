@@ -4,10 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { Test1Component } from './test1/test1.component';
 import { LoginComponent } from './login/login.component';
+import{HeaderComponent} from './header/header.component';
+import { ContentComponent } from 'app/content/content.component';
+import {RegisterComponent} from 'app/register/register.component'
 
 const routingTable: Routes = [
   {path:'test1', component: Test1Component},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path:'header',component:HeaderComponent},
+  {path:'content',component:ContentComponent} ,
+  {path:'register',component:RegisterComponent} 
 ];
 
 @NgModule({
