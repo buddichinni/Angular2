@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   ClickFunction(username:string,password:string){  
     this.details= this._credentialsService.Authenticate(username,password);
     if(this.details!="Invalid credentials"){
-      this.router.navigate(['/content']);
+      this.router.navigate(['/content/home']);
     }
   }
   

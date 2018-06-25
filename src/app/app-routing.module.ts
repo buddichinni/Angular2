@@ -12,7 +12,7 @@ const routingTable: Routes = [
   {path:'test1', component: Test1Component},
   {path:'login',component:LoginComponent},
   {path:'header',component:HeaderComponent},
-  {path:'content',component:ContentComponent} ,
+  {path:'content/:parameterValue',component:ContentComponent} ,
   {path:'register',component:RegisterComponent} 
 ];
 
