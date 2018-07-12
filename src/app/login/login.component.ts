@@ -20,6 +20,9 @@ export class LoginComponent implements OnInit {
     if(this.details!="Invalid credentials"){
       this.router.navigate(['/content/home']);
     }
+    else{
+      alert("Invalid credentials")
+    }
   }
   
   ngOnInit() {

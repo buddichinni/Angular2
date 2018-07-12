@@ -1,0 +1,15 @@
+
+[{ "clientName": "Earthlink", "clientId":400001, "type":"CLIENT",
+   "Ce": [{"cenNme":"India", "ceId": 50001, "type": "CE",
+     "location":[{ "locationName" : "Hyderabad" , "locationId": "50HYD01",
+       "TM":[{"tmName": "John" ,"tmId": "TMHYD01", "type":"TM",
+         "Managers":[{"managerName": "Jaquas" , "managerId": "MGR0001", "type": "MGR", 
+          "TL":[{ "tlName": "Juber" ,"tlId":"TLHYD001", "type": "TL",
+             "Agents":[{"agentName": "javed", "agentId":"AGHYD001", "type":"AGENT" }] }] }] }] }] }] },
+ { "clientName": "SamsungOne", "clientId":500001, "type":"CLIENT",
+   "Ce": [{"cenNme":"India", "ceId": 50001, "type": "CE", 
+    "location":[{ "locationName" : "Hyderabad" , "locationId": "50HYD01",
+       "TM":[{"tmName": "John" ,"tmId": "TMHYD01", "type":"TM",
+         "Managers":[{"managerName": "Jaquas" , "managerId": "MGR0001", "type": "MGR", 
+          "TL":[{ "tlName": "Juber" ,"tlId":"TLHYD001", "type": "TL", 
+            "Agents":[{"agentName": "javed", "agentId":"AGHYD001", "type":"AGENT" }] }] }] }] }] }] }]

@@ -1,12 +1,7 @@
 .content{
-    position: relative;
-    margin-top: -45%;
     background: white;
-    height: 92.8vh;
 }
 .toysDiv{
     border: 2px solid rgb(65, 181, 174);
-    width: 35%;
-    margin: 46%;
-    float: right;
+    margin: 50px 2% 0 2%;
 }

@@ -1,19 +1,114 @@
 <app-header></app-header>
-   <div class="content">
-        
-      <div class="toysDiv" [hidden]="!show">
-        <table>
-            <tr>
-                <td>
-                    S.No
-                </td>
-                <td>
-                    Name
-                </td>
-                <td>
-                    Phone No
-                </td>
-            </tr>
+   <div class="content">        
+      <div class="toysDiv" [hidden]="!show">       
+        <h5>Chart Data</h5>
+        <table class="table table-hover">
+            <thead>
+                    <tr>                            
+                            <td>
+                                    User Name
+                            </td>
+                            <td>
+                                    User ID
+                            </td>
+                            <td>
+                                    Create Date
+                            </td>
+                            <td>
+                                Is Active
+                            </td>
+                        </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor="let data of observablechartData | async">                           
+                            <td>
+                                    {{data.user_name}}
+                            </td>
+                            <td>
+                                    {{data.user_id}}     
+                            </td><td>
+                                {{data.Created_Date}}
+                            </td>
+                            <td>
+                                {{data.is_active}}
+                        </td>
+                    </tr> 
+            </tbody>                             
         </table>
+        <h5>Users Data</h5>        
+        <table class="table table-hover">
+                <thead>
+                        <tr>
+                                <td>
+                                        ID
+                                </td>
+                                <td>
+                                        User Name
+                                </td>
+                                <td>
+                                        Tenant ID
+                                </td>
+                                <td>
+                                        Create Date
+                                </td>
+                            </tr>
+                </thead>
+                <tbody>
+                        <tr *ngFor="let data of observableuserData | async">
+                                <td>
+                                        {{data.id}}
+                                </td>
+                                <td>
+                                        {{data.User_Name}}
+                                </td>
+                                <td>
+                                        {{data.Tenant_ID}}     
+                                </td><td>
+                                    {{data.Created_Date}}
+                                </td>
+                        </tr> 
+                </tbody>                             
+        </table>
+        <div *ngIf="errorMessage"> {{errorMessage}} </div> 
       </div>
+      <div class="toysDiv" [hidden]="show">
+              <label>User Name</label><input [(ngModel)]="userDetails.User_Name" /><br>
+              <label>Email</label><input [(ngModel)]="userDetails.Email" />
+              <button (click)="updateUserDetails(userDetails)">Update</button>
+      </div>
+      <div class="toysDiv" [hidden]="show">
+        <button style="float:right">+</button><br>
+        <div style="text-align:center">
+                <input type="text"><br>
+                <div id="input_fields_wrap">
+                        <div id="ansDiv">
+                        <input type="text" name="mytext[]">
+                        <button id="optionsInput" (click)="getJSON()">+</button>                        
+                        </div>
+                </div> 
+        </div> 
+      </div>   
+      <div class="toysDiv" [hidden]="show">
+                <table class="table table-hover">
+                                <thead>
+                                        <tr>                            
+                                                <td>
+                                                        User Name
+                                                </td>
+                                                <td>
+                                                        User ID
+                                                </td>
+                                            </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>                           
+                                                <td>
+                                                        {{obj.id}}
+                                                </td>
+                                                <td>
+                                                        {{obj.name}}     
+                                                </td>
+                                        </tr> 
+                                </tbody>     
+                                </table>                        
    </div>

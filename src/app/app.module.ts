@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { Test1Component } from './test1/test1.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HttpModule } from '@angular/http';
+import {apiService} from 'app/api-service.service'
+import { from } from 'rxjs/observable/from';
 
 @NgModule({
   declarations: [
@@ -26,8 +29,12 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
+  providers: [
+    apiService
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
